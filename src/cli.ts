@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * cli.ts — stdio bootstrap for aotrust-mcp.
  *

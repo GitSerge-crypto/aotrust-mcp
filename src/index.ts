@@ -56,7 +56,7 @@ function validateFree(raw: unknown, toolName: string): FreeArgs | { errorReply: 
 
 export async function runServer(): Promise<void> {
   const server = new McpServer(
-    { name: "aotrust-mcp", version: "0.1.0" },
+    { name: "aotrust-mcp", version: "0.1.1" },
     {
       instructions:
         "AOTrust notary: cryptographic proof-of-existence for AI artifacts. " +
