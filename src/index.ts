@@ -56,7 +56,7 @@ function validateFree(raw: unknown, toolName: string): FreeArgs | { errorReply: 
 
 export async function runServer(): Promise<void> {
   const server = new McpServer(
-    { name: "aotrust-mcp", version: "0.1.1" },
+    { name: "aotrust-mcp", version: VERSION },
     {
       instructions:
         "AOTrust notary: cryptographic proof-of-existence for AI artifacts. " +
@@ -200,6 +200,7 @@ import {
 } from "./client.js";
 import { PaymentConfigError } from "./payment.js";
 import { TOOL_SPECS } from "./tools.js";
+import { VERSION } from "./env.js";
 
 const TOOL_DESC_STATUS = TOOL_SPECS[0]?.description ?? "Check notarization status by job_id";
 const TOOL_DESC_VERIFY = TOOL_SPECS[1]?.description ?? "Server-side PDR verification";
