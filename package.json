@@ -1,0 +1,42 @@
+{
+  "name": "aotrust-mcp",
+  "version": "0.1.0",
+  "description": "AOTrust notary MCP stdio server — 5 tools over the AOTrust HTTP API: status, verify, shield lookup, free notarization, and $0.01 x402 paid notarization (Base).",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "aotrust-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "smoke": "node dist/cli.js --tools"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@x402/evm": ">=2.19 <2.29",
+    "@x402/fetch": ">=2.19 <2.29",
+    "viem": "^2.57.7",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^26.6.5",
+    "vitest": "^5.0.5"
+  },
+  "keywords": [
+    "mcp",
+    "aotrust",
+    "x402",
+    "notarization",
+    "modelcontextprotocol"
+  ]
+}
