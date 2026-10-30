@@ -77,7 +77,7 @@ Free tools work with no env at all; only `notary_notarize` needs the key.
 
 ## Verification of proofs
 
-PDRs are Ed25519-signed 239-byte bundles anchored daily in Merkle trees on
+PDRs are Ed25519-signed 239-byte bundles anchored hourly in Merkle trees on
 NEAR mainnet. Verify any receipt at <https://verify.aotrust.link>, or with
 `notary_verify` / `notary_lookup` from this server.
 
