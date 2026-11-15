@@ -1,7 +1,7 @@
 {
   "name": "aotrust-mcp",
   "mcpName": "link.aotrust/notary",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "AOTrust notary MCP stdio server — 5 tools over the AOTrust HTTP API: status, verify, shield lookup, free notarization, and $0.01 x402 paid notarization (Base).",
   "license": "MIT",
   "type": "module",
