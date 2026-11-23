@@ -26,7 +26,7 @@ quota, not a defect).
 npm install -g aotrust-mcp   # or: npx aotrust-mcp
 aotrust-mcp                  # starts the stdio MCP server
 aotrust-mcp --tools          # print tool-spec JSON and exit
-aotrust-mcp --version        # 0.1.5
+aotrust-mcp --version        # 0.1.6
 ```
 
 ## Claude Code config

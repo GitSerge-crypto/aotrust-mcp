@@ -1,0 +1,36 @@
+name: Publish to npm
+
+# Provenance: GitHub OIDC mints an id-token, npm signs the package with a
+# sigstore attestation linking it to this repository, commit and workflow.
+# NPM_TOKEN is used only for registry authentication.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      # npm >= 11 is needed for OIDC/provenance support on some runners.
+      - name: Upgrade npm
+        run: npm install -g npm@latest
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Smoke (tool list)
+        run: npm run smoke
+      - name: Publish with provenance
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
