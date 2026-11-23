@@ -30,7 +30,9 @@ jobs:
         run: npm run build
       - name: Smoke (tool list)
         run: npm run smoke
+      # Trusted Publisher (OIDC): no NPM_TOKEN. The package must have a
+      # trusted relationship to this repo/workflow on npmjs.com, which is set
+      # once by the account owner with 2FA:  npm trust github aotrust-mcp
+      #   --file publish.yml --repo GitSerge-crypto/aotrust-mcp --allow-publish -y
       - name: Publish with provenance
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
