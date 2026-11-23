@@ -39,5 +39,13 @@
     "x402",
     "notarization",
     "modelcontextprotocol"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitSerge-crypto/aotrust-mcp.git"
+  },
+  "homepage": "https://aotrust.link",
+  "bugs": {
+    "url": "https://github.com/GitSerge-crypto/aotrust-mcp/issues"
+  }
 }
