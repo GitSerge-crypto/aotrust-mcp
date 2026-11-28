@@ -1,7 +1,7 @@
 {
   "name": "aotrust-mcp",
   "mcpName": "link.aotrust/notary",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "AOTrust notary MCP stdio server — 5 tools over the AOTrust HTTP API: status, verify, shield lookup, free notarization, and $0.01 x402 paid notarization (Base).",
   "license": "MIT",
   "type": "module",
@@ -22,11 +22,17 @@
     "smoke": "node dist/cli.js --tools"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0",
-    "@x402/evm": ">=2.19 <2.29",
-    "@x402/fetch": ">=2.19 <2.29",
-    "viem": "^2.57.7",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@x402/evm": "^2.32.0",
+    "@x402/fetch": "^2.32.0",
+    "viem": "^2.58.8",
     "zod": "^4.6.7"
+  },
+  "overrides": {
+    "hono": "^4.13.23",
+    "body-parser": "^2.4.0",
+    "fast-uri": "^3.1.9",
+    "@hono/node-server": "^2.1.11"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
