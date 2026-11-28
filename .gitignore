@@ -1,3 +1,5 @@
 node_modules/
 dist/
 *.tsbuildinfo
+# local Kilocode rules (personal), AGENTS.md stays tracked
+.kilocode/
